@@ -1,24 +1,4 @@
-﻿let slideImage = Array.from(document.querySelectorAll(".slider-container img"))
-console.log(slideImage);
-
-let sliderCount = slideImage.length
-let currentSlide =1
-
-let nextSlide =document.querySelector(".next")
-let prevSlide =document.querySelector(".prev")
-console.log(sliderCount)
-function slideCheck(){
-
-}
-removeActiveSlider()
-
-function removeActiveSlider() {
-    slideImage.forEach(img=>{
-        
-    })
-}
-
-
+﻿
 
 document.addEventListener("DOMContentLoaded", () => {
     const productContainerHomePage = document.querySelector(".product-card-container");
