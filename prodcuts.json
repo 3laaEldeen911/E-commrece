@@ -4,74 +4,74 @@
     "id": 1,
     "name": "Table Lamp",
     "price": 45.99,
-    "image": "/assets/img/Lamp.png",
+    "image": "assets/img/Lamp.png",
     "category": "Bedroom"
   },  {
     "id": 2,
     "name": "Beige Table Lamp",
     "price": 65.50,
-    "image": "/assets/img/Lamp2.png",
+    "image": "assets/img/Lamp2.png",
     "category": "Bedroom"
   },  {
     "id": 3,
     "name": "Bamboo Basket",
     "price": 95.00,
-    "image": "/assets/img/Basket.png",
+    "image": "assets/img/Basket.png",
     "category": "Bedroom"
   },  {
     "id": 4,
     "name": "Drawer",
     "price": 120.00,
-    "image": "/assets/img/Drawer.png",
+    "image": "assets/img/Drawer.png",
     "category": "Bedroom"
   },  {
     "id": 5,
     "name": "Lamp",
     "price": 180.00,
-    "image": "/assets/img/lamp3.png",
+    "image": "assets/img/Lamp3.png",
     "category": "Bedroom"
   },  {
     "id": 6,
     "name": "Light Beige Pillow",
     "price": 240.00,
-    "image": "/assets/img/Light.png",
+    "image": "assets/img/Light.png",
     "category": "Bedroom"
   },  {
     "id": 7,
     "name": "Black Tray Table",
     "price": 280.00,
-    "image": "/assets/img/Pchair.png",
+    "image": "assets/img/Pchair.png",
     "category": "Bedroom"
   },  {
     "id": 8,
     "name": "White Drawer Unit",
     "price": 320.00,
-    "image": "/assets/img/Drawer.png",
+    "image": "assets/img/Drawer.png",
     "category": "Bedroom"
   },  {
     "id": 9,
     "name": "Chair",
     "price": 360.00,
-    "image": "/assets/img/Chair.png",
+    "image": "assets/img/Chair.png",
     "category": "Bedroom"
   },  {
     "id": 10,
     "name": "Arm Chair",
     "price": 420.00,
-    "image": "/assets/img/Chair.png",
+    "image": "assets/img/Chair.png",
     "category": "Bedroom"
   },
    {
     "id": 11,
     "name": "Wood Chair",
     "price": 480.00,
-    "image": "/assets/img/Chair.png",
+    "image": "assets/img/Chair.png",
     "category": "Bedroom"
   },  {
     "id": 12,
     "name": "Modern Chair",
     "price": 520.00,
-    "image": "/assets/img/Chair.png",
+    "image": "assets/img/Chair.png",
     "category": "Bedroom"
   }
 ]

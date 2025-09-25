@@ -4,7 +4,6 @@ let allProducts = []
 fetch("../prodcuts.json")
   .then(response=>response.json())
   .then(products=>{
-    // Preserve original index to keep Add to Cart mapping stable after filtering
     allProducts = products.map((p, i) => ({ ...p, __idx: i }))
     renderProducts(allProducts)
   })
@@ -15,7 +14,7 @@ function renderProducts(list){
         productContainer.innerHTML +=`
         <div class="product-card col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card-body position-relative overflow-hidden border rounded ">
-        <img src="${card.image}" class="img-fluid" alt="card">
+        <img src="${card.image.startsWith('assets/') ? '../' + card.image : card.image}" class="img-fluid" alt="card">
         
         <div class="d-flex justify-content-between card-info-header z-2 px-3 position-absolute">
             <div class="card-info-hover">
@@ -30,7 +29,7 @@ function renderProducts(list){
             data-product-index="${card.__idx ?? index}"
             data-product-name="${card.name}"
             data-product-price="${Number(card.price)}"
-            data-product-image="${card.image}"
+            data-product-image="${card.image.startsWith('assets/') ? '../' + card.image : card.image}"
             data-product-category="${card.category}">
             Add to cart
         </button>

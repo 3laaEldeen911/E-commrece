@@ -2,7 +2,7 @@
 let productContainerHomePage=document.querySelector(".product-card-container")
 
 
-let productsJson=fetch("/prodcuts.json")
+let productsJson=fetch("prodcuts.json")
   .then(response => response.json())
 
 

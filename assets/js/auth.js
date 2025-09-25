@@ -1,11 +1,9 @@
-﻿// Very simple auth (beginner style) using localStorage
-
+﻿
 document.addEventListener('DOMContentLoaded', function(){
-    // keys
+
     var USERS_KEY = 'users';
     var CURRENT_USER_KEY = 'currentUser';
 
-    // helpers
     function loadUsers(){
         var raw = localStorage.getItem(USERS_KEY);
         return raw ? JSON.parse(raw) : [];
@@ -24,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function(){
         localStorage.removeItem(CURRENT_USER_KEY);
     }
 
-    // update header if present
+
     var current = getCurrentUser();
     var userNameEl = document.getElementById('user-name');
     var loginLink = document.getElementById('login-link');
@@ -36,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function(){
         logoutBtn.addEventListener('click', function(e){ e.preventDefault(); clearCurrentUser(); location.reload(); });
     }
 
-    // signup form
     var signupForm = document.getElementById('signup-form');
     if(signupForm){
         signupForm.addEventListener('submit', function(e){
@@ -67,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     }
 
-    // login form
     var loginForm = document.getElementById('login-form');
     if(loginForm){
         loginForm.addEventListener('submit', function(e){

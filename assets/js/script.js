@@ -14,13 +14,11 @@ removeActiveSlider()
 
 function removeActiveSlider() {
     slideImage.forEach(img=>{
-        // img.classList.remove("active")
+        
     })
 }
 
-// /////////////////////////////////////////////////////////////////
-// Products rendering on Home Page
-// NOTE: We avoid top-level await; wrap logic in DOMContentLoaded
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const productContainerHomePage = document.querySelector(".product-card-container");
@@ -35,10 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function loadAndRenderProducts(containerElement) {
-    // Try to fetch products JSON. Adjust the path if your file is elsewhere.
-    // Resolved relative to the page URL (index.html), not this script file.
+
     const possibleUrls = [
-        "prodcuts.json", // common misspelling as in your codebase
+        "prodcuts.json", 
         "assets/prodcuts.json",
         "assets/products.json",
         "products.json"
@@ -55,7 +52,7 @@ async function loadAndRenderProducts(containerElement) {
             break;
         } catch (err) {
             lastError = err;
-            // Try next URL
+           
         }
     }
 
@@ -63,16 +60,14 @@ async function loadAndRenderProducts(containerElement) {
         throw lastError || new Error("Products JSON not found");
     }
 
-    // Support either an object with a products array or a plain array
+
     const products = Array.isArray(data) ? data : (Array.isArray(data.products) ? data.products : []);
 
     const firstFour = products.slice(0, 4);
 
-    // Build cards markup with product index for stable unique keying in cart
+   
     const cardsHtml = firstFour.map((p, idx) => buildProductCardHtml(p, idx)).join("");
 
-    // If you already have static cards, you can replace or append.
-    // Here we replace existing content to ensure only 4 cards show.
     containerElement.innerHTML = cardsHtml;
 }
 
@@ -99,7 +94,7 @@ function buildProductCardHtml(product, index) {
     const displayDiscount = typeof discountPercent === "number" ? `-${discountPercent} %` : (discountPercent || "");
     const isNewBadge = Boolean(isNew);
 
-    // Build stars (default 5)
+ 
     const starsCount = Math.max(0, Math.min(5, Number(rating) || 5));
     const starsHtml = new Array(5).fill(0).map((_, idx) => {
         return `<i class="fa-solid fa-star${idx < starsCount ? "" : ""}"></i>`;
@@ -108,11 +103,11 @@ function buildProductCardHtml(product, index) {
     return `
   <div class="product-card col-12 col-sm-6 col-md-4 col-lg-3">
     <div class="card-body position-relative overflow-hidden border rounded ">
-      <img src="${displayImage}" class="img-fluid" alt="${escapeHtml(displayName)}">
+      <img src="${displayImage}" class="img-fluid" alt="${displayName}">
       <div class="d-flex justify-content-between card-info-header z-2 px-3 position-absolute">
         <div class="card-info-hover">
           ${isNewBadge ? `<p class="fw-bold">New</p>` : ""}
-          ${displayDiscount ? `<p class="green">${escapeHtml(displayDiscount)}</p>` : ""}
+          ${displayDiscount ? `<p class="green">${displayDiscount}</p>` : ""}
         </div>
         <i class="fa-regular fa-heart"></i>
       </div>
@@ -125,21 +120,12 @@ function buildProductCardHtml(product, index) {
         ${starsHtml}
       </div>
       <div class="card-name">
-        <p class="fw-semibold mb-0">${escapeHtml(displayName)}</p>
+        <p class="fw-semibold mb-0">${displayName}</p>
         <p class="card-price d-flex gap-3">
-          ${escapeHtml(displayPrice)} ${displayOldPrice ? `<del>${escapeHtml(displayOldPrice)}</del>` : ""}
+          ${displayPrice} ${displayOldPrice ? `<del>${displayOldPrice}</del>` : ""}
         </p>
       </div>
     </div>
   </div>`
 }
 
-function escapeHtml(text) {
-    if (text == null) return "";
-    return String(text)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-}

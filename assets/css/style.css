@@ -101,6 +101,7 @@ nav{
         left: 30px;
     }
 
+ 
 
 .card-info-header {
   width: 100%;
@@ -129,6 +130,7 @@ nav{
 }
 .product-card img{
     width: 100%;
+    
     object-fit: contain;
 }
 
