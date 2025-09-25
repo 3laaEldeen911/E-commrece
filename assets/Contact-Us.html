@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- ///////////////////////////////////////////////////fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="container my-4">
+      <nav class="">
+        <a href="">Panto</a>
+        <ul class="d-flex gap-4 list-unstyled">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="Login.html"><i class="fa-solid fa-user"></i></a></li>
+          <li><a href="../cart.html"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count">0</span></a></li>
+        </ul>
+
+        <ul class="d-flex gap-4 list-unstyled nav-logo">
+          <li>
+            <a href=""><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa-solid fa-cart-shopping"></i><span>0</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="contact-us container">
+      <h1 class="text-center m-auto">Contact-Us</h1>
+    </div>
+
+    <div class="why-us container my-5">
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card text-center h-100 bg-light border-0">
+            <div
+              class="card-body d-flex flex-column justify-content-center align-items-center"
+            >
+              <div class="fs-1 mb-3">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h5 class="card-title fw-bold">Address</h5>
+              <p class="card-text text-muted">
+                234 Hai Trieu, Ho Chi Minh City
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card text-center h-100 bg-light border-0">
+            <div
+              class="card-body d-flex flex-column justify-content-center align-items-center"
+            >
+              <div class="fs-1 mb-3"><i class="fa-solid fa-phone"></i></div>
+              <h5 class="card-title fw-bold">24/7 Support</h5>
+              <p class="card-text text-muted">Phone and Email support</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card text-center h-100 bg-light border-0">
+            <div
+              class="card-body d-flex flex-column justify-content-center align-items-center"
+            >
+              <div class="fs-1 mb-3"><i class="fa-solid fa-envelope"></i></div>
+              <h5 class="card-title fw-bold">Email</h5>
+              <p class="card-text text-muted">hello@mail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- form -->
+
+    <div class="contact-form container my-5 ">
+        <div class="row">
+            <form action="" class="d-flex flex-column col-12 col-md-6 gap-2 w-50">
+                <label for="fname">Full Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Your Name">
+                
+                <label for="Email">Email</label>
+                <input type="email" required placeholder="Your Email">
+    
+                <label for="Massege">Massege</label>
+                <textarea name="Massege" id="Massege" cols="5" rows="5" placeholder="Enter Your Massege"></textarea>
+    
+                <input type="submit" class="submit" placeholder="submit Massege">
+                
+            </form>
+
+            <div class="col-12 col-md-6">
+                <img src="img/Map.png" class="img-fluid" alt="Map">
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

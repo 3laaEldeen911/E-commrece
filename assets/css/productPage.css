@@ -1,0 +1,74 @@
+   .sidebar {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            height: fit-content;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 2rem;
+        }
+        
+        .sidebar h6 {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .category-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f3f4;
+        }
+        
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .category-list a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .category-list a:hover,
+        .category-list a.active {
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        .price-filter {
+            margin-top: 2rem;
+        }
+        
+        .form-check {
+            margin-bottom: 0.8rem;
+        }
+        
+        .form-check-input:checked {
+            background-color: #2c3e50;
+            border-color: #2c3e50;
+        }
+        
+        .form-check-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+            cursor: pointer;
+        }
+        
+        #cart-count {
+    background-color: #dc3545;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin-left: 5px;
+}
