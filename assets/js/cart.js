@@ -1,4 +1,4 @@
-﻿var cart = [];
+﻿var cart = [];  
 var products = [];
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -101,7 +101,7 @@ function addToCart(productId, quantity) {
   addProduct(p, quantity || 1);
 }
 
-function addProduct(p, qty) {
+function addProduct(p, qty) { 
   if (!p) return;
   var key = String(p.id) + "|" + (p.name || "") + "|" + (p.image || "");
   var item = cart.find(function (x) {
@@ -113,7 +113,7 @@ function addProduct(p, qty) {
     cart.push({
       key: key,
       id: p.id,
-      name: p.name,
+      name: p.name, 
       price: Number(p.price) || 0,
       image: p.image,
       category: p.category,
